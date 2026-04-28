@@ -48,10 +48,18 @@ void sorted (Penjaga* penjaga, int size){
                     penjaga[j]=temp;
             }
             if (penjaga[i].skor==penjaga[j].skor){
-                if (penjaga[i].nama<penjaga[j].nama){
+                if (penjaga[i].id==penjaga[j].id){
+                    if (penjaga[i].nama<penjaga[j].nama){
+                        Penjaga temp = penjaga[i];
+                        penjaga[i]=penjaga[j];
+                        penjaga[j]=temp;
+                    }
+                }
+                else if(penjaga[i].id>penjaga[j].id) {
                     Penjaga temp = penjaga[i];
-                    penjaga[i]=penjaga[j];
-                    penjaga[j]=temp;
+                        penjaga[i]=penjaga[j];
+                        penjaga[j]=temp;
+
                 }
             }
         }
