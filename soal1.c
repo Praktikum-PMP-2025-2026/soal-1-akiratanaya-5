@@ -107,9 +107,16 @@ int main(void) {
     idxsiang= idxhighestsiang(penjaga, size);
     idxmalam= idxhighestmalam(penjaga, size);
 
-    printf("PAGI %s %d %d\n", penjaga[idxpagi].nama, penjaga[idxpagi].id, penjaga[idxpagi].skor);
+    if (strcmp(penjaga[idxpagi].shift,"PAGI")==0){
+        printf("PAGI %s %d %d\n", penjaga[idxpagi].nama, penjaga[idxpagi].id, penjaga[idxpagi].skor);
+    }
+    if (strcmp(penjaga[idxsiang].shift,"SIANG")==0){
     printf("SIANG %s %d %d\n", penjaga[idxsiang].nama, penjaga[idxsiang].id, penjaga[idxsiang].skor);
+    }
+
+    if (strcmp(penjaga[idxmalam].shift,"MALAM")==0){
     printf("MALAM %s %d %d\n", penjaga[idxmalam].nama, penjaga[idxmalam].id, penjaga[idxmalam].skor);
+    }
 
     // printf("%d\n",strcmp(penjaga[1].shift,"PAGI"));
     // output(size, penjaga);
