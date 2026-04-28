@@ -117,12 +117,21 @@ int main(void) {
     if (strcmp(penjaga[idxpagi].shift,"PAGI")==0){
         printf("PAGI %s %d %d\n", penjaga[idxpagi].nama, penjaga[idxpagi].id, penjaga[idxpagi].skor);
     }
+    else {
+        printf("PAGI -\n");
+    }
     if (strcmp(penjaga[idxsiang].shift,"SIANG")==0){
     printf("SIANG %s %d %d\n", penjaga[idxsiang].nama, penjaga[idxsiang].id, penjaga[idxsiang].skor);
+    }
+    else {
+        printf("SIANG -\n");
     }
 
     if (strcmp(penjaga[idxmalam].shift,"MALAM")==0){
     printf("MALAM %s %d %d\n", penjaga[idxmalam].nama, penjaga[idxmalam].id, penjaga[idxmalam].skor);
+    }
+    else {
+        printf("MALAM -\n");
     }
 
     // printf("%d\n",strcmp(penjaga[1].shift,"PAGI"));
